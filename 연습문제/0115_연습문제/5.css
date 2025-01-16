@@ -1,0 +1,101 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  display: flex;
+  width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.container{
+  /* width: 400px; */
+  flex-grow: 1;
+  border-right: 2px solid #cccccc;
+  padding: 0 10px;
+}
+
+.number-container{
+  width: 200px;
+  flex-shrink: 0;
+}
+
+#display{
+  border-bottom:  2px solid #cccccc;
+  height: 60px;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+
+#keypad { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.key{
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  border-radius: 50%;
+
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  cursor: pointer;    /* 커서 손가락 */
+  user-select: none; /* 블럭 막기 */
+}
+
+.key:active{
+  transform: scale(0.95); 
+}
+
+.key:hover{
+  background-color: #cccccc;
+}
+
+.btn-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-container > button{
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/* active 반응 선택자 */
+.btn-container > button:active{
+  transform: scale(0.95); 
+}
+
+.btn-container > #add{
+  background-color: white;
+  color: green;
+  border: 2px solid green; 
+  border-radius: 8px;
+}
+
+.btn-container > #reset{
+  background-color: white;
+  color: gray;
+  border: 2px solid gray; 
+  border-radius: 8px;
+}
+
+

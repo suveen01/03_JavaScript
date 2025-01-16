@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전화번호 목록</title>
+  <link rel="stylesheet" href="5.css">
+  <style>
+    /* 번호 목록 스타일 */
+    .number-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .number-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .phone-number {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    .favorite-btn, .delete-btn {
+      margin-left: 5px;
+      padding: 5px 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .favorite-btn {
+      color: gray;
+    }
+
+    .favorite-btn.active {
+      color: red;
+      font-weight: bold;
+    }
+
+    #display {
+      width: 100%;
+      padding: 10px;
+      font-size: 20px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <section class="container">
+    <div id="display"></div> <!-- 입력 번호 표시 -->
+
+    <div id="keypad"> <!-- 키패드 -->
+      <div class="key">1</div>
+      <div class="key">2</div>
+      <div class="key">3</div>
+      <div class="key">4</div>
+      <div class="key">5</div>
+      <div class="key">6</div>
+      <div class="key">7</div>
+      <div class="key">8</div>
+      <div class="key">9</div>
+      <div class="key">#</div>
+      <div class="key">0</div>
+      <div class="key">*</div>
+    </div>
+
+    <div class="btn-container">
+      <button id="add">추가</button>
+      <button id="reset">초기화</button>
+    </div>
+  </section>
+
+  <section class="number-container">
+    <h4>전화번호 목록</h4>
+    <ul id="number-list" class="number-list"></ul> <!-- ul 목록 추가 -->
+
+  </section>
+</main>
+
+<script src="5-1.js"></script>
+</body>
+</html>
